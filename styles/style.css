@@ -2,6 +2,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+nav.pw-bg-nav {
+    background-color: #001B2E!important;
+    padding-left: 15px;
+}
+
 section.home-section-brand {
     text-align: center;
 }
