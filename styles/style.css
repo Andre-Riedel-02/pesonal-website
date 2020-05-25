@@ -1,9 +1,9 @@
-*{
-    font-family: 'Poppins', sans-serif;
+* {
+    font-family: "Poppins", sans-serif;
 }
 
 nav.pw-bg-nav {
-    background-color: #001B2E!important;
+    background-color: #001b2e !important;
     padding-left: 15px;
 }
 
@@ -20,10 +20,8 @@ section.home-section-brand{
     padding-top: 30px;
 }
 
-section.home-section-brand  img{
-
+section.home-section-brand img {
     max-height: 150px;
     border-radius: 50%;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
-
 }
