@@ -7,8 +7,17 @@ nav.pw-bg-nav {
     padding-left: 15px;
 }
 
-section.home-section-brand {
+/*TODO o meu after n funcionou dps vc me passa como faz*/
+nav.navbar-dark .navbar-nav .active-style>.nav-link{ 
+    color: #fff;
+    border-bottom: 2px solid #FF5A5F;
+    padding: 8px 2px 2px 2px;
+    margin-right: 5px;
+}
+
+section.home-section-brand{
     text-align: center;
+    padding-top: 30px;
 }
 
 section.home-section-brand  img{
