@@ -2,6 +2,30 @@
     font-family: "Poppins", sans-serif;
 }
 
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+section{
+    padding: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.pw-center-itens{
+    text-align: center;
+}
+
+.pw-after-red::after{
+    content: '';
+    background-color: #FF5A5F;
+    width: 100px;
+    height: 3px;
+    display: block;
+    position: absolute;
+}
+
 nav.pw-bg-nav {
     background-color: #001b2e !important;
     padding-left: 15px;
@@ -16,7 +40,6 @@ nav.navbar-dark .navbar-nav .active-style>.nav-link{
 }
 
 section.home-section-brand{
-    text-align: center;
     padding-top: 30px;
 }
 
@@ -24,4 +47,10 @@ section.home-section-brand img {
     max-height: 150px;
     border-radius: 50%;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.home-section-blue{
+    padding-top: 30px;
+    background-color: #043565;
+    color: #fff;
 }
