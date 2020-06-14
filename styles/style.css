@@ -21,7 +21,21 @@ section.home-section-brand{
 }
 
 section.home-section-brand img {
-    max-height: 150px;
+    max-height: 200px;
     border-radius: 50%;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+a.btn-brand{
+    background-color: transparent;
+    border: 2px solid #043565;
+    border-radius: 10px;
+    color: #043565;
+    width: 200px;
+    font-weight: 500;
+}
+a.btn-brand:hover{
+    background-color: #043565;
+    border: 2px solid #043565;
+    color: #fff;
 }
