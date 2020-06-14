@@ -1,46 +1,93 @@
+/* *----------------------------- root variables ----------------------------- */
+
+:root {
+    --oxford-blue: #001b2e;
+    --midnight-green: #0b3c49;
+    --myrtle-green: #32746d;
+    --prussian-blue: #043565;
+    --tufts-blue: #3e92cc;
+    --dark-sky-blue: #98c1d9;
+    --orange-red: #ff5a5f;
+
+    --gray-1: #333333;
+    --gray-2: #4f4f4f;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+}
+
+/* *--------------------------- global HTML styles --------------------------- */
+
 * {
     font-family: "Poppins", sans-serif;
 }
 
-.container-fluid{
+/* adiciona um padding nas sections, pois o padding do container fluid foi removido */
+section {
+    padding: 30px 15px;
+}
+
+/* *------------------------ bootstrap modified styles ----------------------- */
+
+/* remove o padding do container-fluid para que as sections ocupem a largura máxima da tela */
+.container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
 
-section{
-    padding: 15px;
-}
-
-/* -------------------------------------------------------------------------- */
-
-.pw-center-itens{
-    text-align: center;
-}
-
-.pw-after-red::after{
-    content: '';
-    background-color: #FF5A5F;
-    width: 100px;
-    height: 3px;
-    display: block;
-    position: absolute;
-}
-
-nav.pw-bg-nav {
-    background-color: #001b2e !important;
-    padding-left: 15px;
-}
-
-/*TODO o meu after n funcionou dps vc me passa como faz */
-nav.navbar-dark .navbar-nav .active-style>.nav-link{ 
+/*TODO fazer o after */
+nav.navbar-dark .navbar-nav .active-style > .nav-link {
     color: #fff;
-    border-bottom: 2px solid #FF5A5F;
+    border-bottom: 2px solid #ff5a5f;
     padding: 8px 2px 2px 2px;
     margin-right: 5px;
 }
 
-section.home-section-brand{
-    padding-top: 30px;
+/* *------------------------------ global styles ----------------------------- */
+
+nav.pw-bg-nav {
+    background-color: var(--oxford-blue) !important;
+    /* padding-left: 15px; */
+}
+
+a.pw-btn-brand {
+    background-color: transparent;
+    border: 2px solid var(--prussian-blue);
+    border-radius: 10px;
+    color: var(--prussian-blue);
+    width: 200px;
+    font-weight: 500;
+}
+a.pw-btn-brand:hover {
+    background-color: var(--prussian-blue);
+    border: 2px solid var(--prussian-blue);
+    color: #fff;
+}
+
+/* classe genérica para centralizar os itens */
+.pw-center-itens {
+    text-align: center;
+}
+
+.pw-h1-after-orange-red::after {
+    content: '';
+    background-color: var(--orange-red);
+    width: 100px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    top: 60px;
+}
+
+/* *---------------------------- page home styles ---------------------------- */
+
+section.home-section-brand {
+    background-color: white;
+    color: var(--gray-1);
+}
+section.home-section-brand.home-section-formacao {
+    background-image: linear-gradient(to bottom, #E0E0E0 10%, white);
+    /* #E0E0E0 == --gray-5 */
 }
 
 section.home-section-brand img {
@@ -50,21 +97,11 @@ section.home-section-brand img {
     margin-bottom: 20px;
 }
 
-section.home-section-blue{
-    padding-top: 30px;
-    background-color: #043565;
-    color: #fff;
+section.home-section-blue {
+    background-color: var(--prussian-blue);
+    color: white;
 }
-a.btn-brand{
-    background-color: transparent;
-    border: 2px solid #043565;
+
+section.home-section-blue img{
     border-radius: 10px;
-    color: #043565;
-    width: 200px;
-    font-weight: 500;
-}
-a.btn-brand:hover{
-    background-color: #043565;
-    border: 2px solid #043565;
-    color: #fff;
 }
