@@ -12,14 +12,14 @@
     --gray-1: #333333;
     --gray-2: #4f4f4f;
     --gray-3: #828282;
-    --gray-4: #BDBDBD;
-    --gray-5: #E0E0E0;
+    --gray-4: #bdbdbd;
+    --gray-5: #e0e0e0;
 }
 
 /* *--------------------------- global HTML styles --------------------------- */
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* adiciona um padding nas sections, pois o padding do container fluid foi removido */
@@ -35,12 +35,34 @@ section {
     padding-right: 0;
 }
 
-/*TODO fazer o after */
-nav.navbar-dark .navbar-nav .active-style > .nav-link {
-    color: #fff;
-    border-bottom: 2px solid #ff5a5f;
-    padding: 8px 2px 2px 2px;
-    margin-right: 5px;
+/* TODO: centralizar o after */
+
+nav ul li a{
+    position: relative;
+}
+
+nav ul li a::after{
+    position: absolute;
+    display: block;
+    content: '';    
+    width: 40px;
+    height: 3px;
+    background-color: var(--orange-red);
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms
+}
+
+nav ul li a:hover::after{
+    transform: scale(1, 1);
+}
+
+nav ul li.active-style a {
+    color: white;
+}
+
+nav ul li.active-style a::after {
+    transform: scale(1, 1);
 }
 
 /* *------------------------------ global styles ----------------------------- */
@@ -57,26 +79,47 @@ a.pw-btn-brand {
     color: var(--prussian-blue);
     width: 200px;
     font-weight: 500;
+    transition: color 500ms ease;
+    transition: background-color 500ms ease;
 }
 a.pw-btn-brand:hover {
     background-color: var(--prussian-blue);
     border: 2px solid var(--prussian-blue);
-    color: #fff;
+    color: white;
+}
+
+a.pw-btn-dark {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    font-weight: 500;
+    transition: color 500ms ease;
+    transition: background-color 500ms ease;
+}
+a.pw-btn-dark:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: var(--prussian-blue);
 }
 
 /* classe genérica para centralizar os itens */
 .pw-center-itens {
     text-align: center;
 }
-
+.pw-h1-after-orange-red{
+    position: relative;
+    margin-bottom: 30px;   
+}
 .pw-h1-after-orange-red::after {
+    position: absolute;
+    display: block;
     content: '';
-    background-color: var(--orange-red);
     width: 100px;
     height: 3px;
-    display: block;
-    position: absolute;
     top: 60px;
+    background-color: var(--orange-red);
 }
 
 /* *---------------------------- page home styles ---------------------------- */
@@ -86,7 +129,7 @@ section.home-section-brand {
     color: var(--gray-1);
 }
 section.home-section-brand.home-section-formacao {
-    background-image: linear-gradient(to bottom, #E0E0E0 10%, white);
+    background-image: linear-gradient(to bottom, #e0e0e0 10%, white);
     /* #E0E0E0 == --gray-5 */
 }
 
@@ -102,6 +145,7 @@ section.home-section-blue {
     color: white;
 }
 
-section.home-section-blue img{
-    border-radius: 10px;
+section.home-section-blue img {
+    padding-bottom: 30px;
+    border-radius: 5%;
 }
