@@ -23,14 +23,14 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
 /* adiciona um padding nas sections, pois o padding do container fluid foi removido */
 section {
-    padding: 30px 15px;
+    padding: 30px;
 }
 
 /* *------------------------ bootstrap modified styles ----------------------- */
@@ -40,12 +40,17 @@ section {
     padding: 0;
 }
 
-.nav-link{
+.nav-link {
     display: inline-block;
 }
 
+.bg-dark {
+    background-color: var(--oxford-blue) !important;
+}
+
 /* *--------------------------------- navbar --------------------------------- */
-nav ul{
+
+nav ul {
     margin: 0;
     padding: 0;
     top: 0;
@@ -53,19 +58,20 @@ nav ul{
     width: 100%;
     list-style-type: none;
 }
-nav li{
+
+nav li {
     font-size: 1rem;
     padding: 0.5em;
     text-align: center;
 }
 
-nav li a{
+nav li a {
     position: relative;
     padding: 0 !important;
 }
 
-nav ul li a::after{
-    content: '';    
+nav ul li a::after {
+    content: '';
     display: inline-block;
     position: absolute;
     left: 0;
@@ -75,29 +81,27 @@ nav ul li a::after{
     background-color: var(--orange-red);
     transition: all ease-in-out 250ms;
 }
+
 nav li a:link,
 nav li a:visited {
     color: #e8e8e8;
 }
 
 nav li a:hover,
-nav li a:focus {    
+nav li a:focus {
     color: white;
     transform: scale(1.1);
 }
 
 nav ul li a:hover::after,
 nav ul li a:focus::after,
-.pw-nav-a-active::after{
-    width: 100%
+.pw-nav-link-active::after {
+    width: 100%;
 }
 
 /* *------------------------------ global styles ----------------------------- */
 
-nav.pw-bg-nav {
-    background-color: var(--oxford-blue) !important;
-    /* padding-left: 15px; */
-}
+/* ----------------------------------- btn ---------------------------------- */
 
 a.pw-btn-brand {
     background-color: transparent;
@@ -109,6 +113,7 @@ a.pw-btn-brand {
     transition: color 500ms ease;
     transition: background-color 500ms ease;
 }
+
 a.pw-btn-brand:hover {
     background-color: var(--prussian-blue);
     border: 2px solid var(--prussian-blue);
@@ -125,6 +130,7 @@ a.pw-btn-dark {
     transition: color 500ms ease;
     transition: background-color 500ms ease;
 }
+
 a.pw-btn-dark:hover {
     background-color: white;
     border: 2px solid white;
@@ -135,44 +141,82 @@ a.pw-btn-dark:hover {
 .pw-center-itens {
     text-align: center;
 }
-.pw-h1-after-orange-red{
+
+.pw-h1-after{
     position: relative;
-    margin-bottom: 30px;   
+    margin-bottom: 1em;
 }
-.pw-h1-after-orange-red::after {
-    position: absolute;
-    display: block;
+
+.pw-h1-after::after{
     content: '';
+    display: block;
+    position: absolute;
+    top: 1.5em;
     width: 100px;
     height: 3px;
-    top: 60px;
+}
+
+.pw-h1-after-orange-red::after {
     background-color: var(--orange-red);
 }
 
+.pw-h1-after-prussian-blue::after {
+    background-color: var(--prussian-blue);
+}
+
+.pw-h1-after-left::after {
+    left: 0;
+}
+
+.pw-h1-after-center::after {
+    left: calc(50% - 50px);
+}
 /* *---------------------------- page home styles ---------------------------- */
 
-section.home-section-brand {
+section img {
+    margin: 20px;
+}
+
+/* ------------------------------ section-brand ----------------------------- */
+
+.home-section-brand {
     background-color: white;
     color: var(--gray-1);
 }
-section.home-section-brand.home-section-formacao {
-    background-image: linear-gradient(to bottom, #e0e0e0 10%, white);
-    /* #E0E0E0 == --gray-5 */
-}
 
-section.home-section-brand img {
-    max-height: 200px;
-    border-radius: 50%;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px;
-}
+/* ------------------------------ section-blue ------------------------------ */
 
-section.home-section-blue {
+.home-section-blue {
     background-color: var(--prussian-blue);
     color: white;
 }
 
-section.home-section-blue img {
-    padding-bottom: 30px;
+/* ---------------------------- section-formacao ---------------------------- */
+
+.home-section-formacao {
+    background-image: linear-gradient(to bottom, var(--gray-5) 10%, white);
+}
+
+.home-section-formacao img {
+    max-height: 200px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------------------- section-projects ---------------------------- */
+
+.home-section-projetos img {
     border-radius: 5%;
+}
+
+/* -------------------------- section-curiosidades -------------------------- */
+
+.home-section-curiosidades img {
+    border-radius: 5%;
+}
+.home-col-card-shadow{
+    padding: 1em;
+    margin: 1.5em 0.5em;
+    border-radius: 5%;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
 }
