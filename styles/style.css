@@ -19,7 +19,13 @@
 /* *--------------------------- global HTML styles --------------------------- */
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Verdana', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 /* adiciona um padding nas sections, pois o padding do container fluid foi removido */
@@ -31,36 +37,59 @@ section {
 
 /* remove o padding do container-fluid para que as sections ocupem a largura máxima da tela */
 .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 }
 
-/* TODO: centralizar o after */
+.nav-link{
+    display: inline-block;
+}
 
-nav ul li a{
+/* *--------------------------------- navbar --------------------------------- */
+nav ul{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+}
+nav li{
+    font-size: 1rem;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav li a{
     position: relative;
+    padding: 0 !important;
 }
 
 nav ul li a::after{
-    position: absolute;
-    display: block;
     content: '';    
-    width: 40px;
-    height: 3px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    width: 0%;
+    height: 2px;
     background-color: var(--orange-red);
-    transition: all ease-in-out 250ms
+    transition: all ease-in-out 250ms;
+}
+nav li a:link,
+nav li a:visited {
+    color: #e8e8e8;
 }
 
-nav ul li a:hover::after{
-    transform: scale(1, 1);
-}
-
-nav ul li.active-style a {
+nav li a:hover,
+nav li a:focus {    
     color: white;
+    transform: scale(1.1);
 }
 
-nav ul li.active-style a::after {
-    transform: scale(1, 1);
+nav ul li a:hover::after,
+nav ul li a:focus::after,
+.pw-nav-a-active::after{
+    width: 100%
 }
 
 /* *------------------------------ global styles ----------------------------- */
