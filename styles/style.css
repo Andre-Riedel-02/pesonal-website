@@ -14,6 +14,8 @@
     --gray-3: #828282;
     --gray-4: #bdbdbd;
     --gray-5: #e0e0e0;
+
+    --shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* *--------------------------- global HTML styles --------------------------- */
@@ -30,7 +32,7 @@ body {
 
 /* adiciona um padding nas sections, pois o padding do container fluid foi removido */
 section {
-    padding: 30px;
+    padding: 2em;
 }
 
 /* *------------------------ bootstrap modified styles ----------------------- */
@@ -142,12 +144,12 @@ a.pw-btn-dark:hover {
     text-align: center;
 }
 
-.pw-h1-after{
+.pw-h1-after {
     position: relative;
     margin-bottom: 1em;
 }
 
-.pw-h1-after::after{
+.pw-h1-after::after {
     content: '';
     display: block;
     position: absolute;
@@ -174,7 +176,7 @@ a.pw-btn-dark:hover {
 /* *---------------------------- page home styles ---------------------------- */
 
 section img {
-    margin: 20px;
+    margin: 0.5em 0.5em 1em 0.5em;
 }
 
 /* ------------------------------ section-brand ----------------------------- */
@@ -200,23 +202,51 @@ section img {
 .home-section-formacao img {
     max-height: 200px;
     border-radius: 50%;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
 }
 
 /* ---------------------------- section-projects ---------------------------- */
 
 .home-section-projetos img {
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 /* -------------------------- section-curiosidades -------------------------- */
 
 .home-section-curiosidades img {
-    border-radius: 5%;
+    border-radius: 15px;
 }
-.home-col-card-shadow{
+
+.home-col-card-shadow {
     padding: 1em;
     margin: 1.5em 0.5em;
-    border-radius: 5%;
+    border-radius: 15px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ----------------------------- section-contato ---------------------------- */
+
+.home-section-contato img {
+    clip-path: polygon(0 17%, 100% 3%, 63% 100%, 0 95%);
+}
+
+.home-section-contato .section-contato-icon:link,
+.home-section-contato .section-contato-icon:visited {
+    color: white;
+}
+
+/* TODO fazer com after */
+.home-section-contato .section-contato-icon:hover,
+.home-section-contato .section-contato-icon:focus {
+    color: var(--orange-red);
+    text-decoration: none;
+}
+
+.home-section-contato i {
+    font-size: 2em;
+    margin-right: 0.5em;
+}
+
+.home-section-contato span {
+margin-right: 1em;
 }
