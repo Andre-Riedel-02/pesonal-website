@@ -90,8 +90,13 @@ nav li a:visited {
 }
 
 nav li a:hover,
-nav li a:focus {
-    color: white;
+nav li a:focus,
+.pw-nav-link-active {
+    color: white !important;
+}
+
+nav li a:hover,
+nav li a:focus{
     transform: scale(1.1);
 }
 
@@ -103,7 +108,7 @@ nav ul li a:focus::after,
 
 /* *------------------------------ global styles ----------------------------- */
 
-/* ----------------------------------- btn ---------------------------------- */
+/* -------------------------------- btn brand ------------------------------- */
 
 a.pw-btn-brand {
     background-color: transparent;
@@ -122,6 +127,8 @@ a.pw-btn-brand:hover {
     color: white;
 }
 
+/* -------------------------------- btn dark -------------------------------- */
+
 a.pw-btn-dark {
     background-color: transparent;
     border: 2px solid white;
@@ -139,10 +146,13 @@ a.pw-btn-dark:hover {
     color: var(--prussian-blue);
 }
 
-/* classe genérica para centralizar os itens */
+/* ---------------- classe genérica para centralizar os itens --------------- */
+
 .pw-center-itens {
     text-align: center;
 }
+
+/* ------------------------- linha embaixo dos h1's ------------------------- */
 
 .pw-h1-after {
     position: relative;
@@ -173,7 +183,8 @@ a.pw-btn-dark:hover {
 .pw-h1-after-center::after {
     left: calc(50% - 50px);
 }
-/* *---------------------------- page home styles ---------------------------- */
+
+/* --------------------------- imagem das sections -------------------------- */
 
 section img {
     margin: 0.5em 0.5em 1em 0.5em;
@@ -181,17 +192,19 @@ section img {
 
 /* ------------------------------ section-brand ----------------------------- */
 
-.home-section-brand {
+.pw-section-brand {
     background-color: white;
     color: var(--gray-1);
 }
 
 /* ------------------------------ section-blue ------------------------------ */
 
-.home-section-blue {
+.pw-section-blue {
     background-color: var(--prussian-blue);
     color: white;
 }
+
+/* *---------------------------- page home styles ---------------------------- */
 
 /* ---------------------------- section-formacao ---------------------------- */
 
@@ -248,5 +261,7 @@ section img {
 }
 
 .home-section-contato span {
-margin-right: 1em;
+    margin-right: 1em;
 }
+
+/* *-------------------------- page formação styles -------------------------- */
