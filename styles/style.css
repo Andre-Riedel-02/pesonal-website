@@ -18,6 +18,7 @@
     --gray-5: #e0e0e0;
 
     --shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    --shadow-2: 4px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 /** -------------------------------------------------------------------------- */
@@ -149,10 +150,38 @@ nav ul li a:focus::after,
     color: var(--prussian-blue);
 }
 
+/* ------------------------------- btn shadow ------------------------------- */
+.pw-btn-shadow {
+    background-color: transparent;
+    border-radius: 25px;
+    box-shadow: var(--shadow-2);
+    color: var(--prussian-blue);
+    width: 250px;
+    font-weight: 500;
+    transition: all 500ms ease;
+}
+
+.pw-btn-shadow:hover {
+   transform: scale(1.1);
+   color: var(--prussian-blue);
+}
+
 /* ---------------- classe genérica para centralizar os itens --------------- */
 
 .pw-center-itens {
     text-align: center;
+}
+
+/* ------------- classe genérica para border-radius das imagens ------------- */
+
+.pw-img-border{
+    border-radius: 15px;
+}
+
+/* ----------------- classe genérica para sombra das imagens ---------------- */
+
+.pw-img-shadow{
+    box-shadow: var(--shadow);
 }
 
 /* ------------------------- linha embaixo dos h1's ------------------------- */
@@ -205,7 +234,7 @@ nav ul li a:focus::after,
 /**                              page home styles                              */
 /** -------------------------------------------------------------------------- */
 
-/* ---------------------------- section-formacao ---------------------------- */
+/* ---------------------------- section-formação ---------------------------- */
 
 .home-section-formacao {
     background-image: linear-gradient(to bottom, var(--gray-5) 10%, white);
@@ -214,21 +243,13 @@ nav ul li a:focus::after,
 .home-section-formacao img {
     max-height: 200px;
     border-radius: 50%;
-    box-shadow: var(--shadow);
 }
 
-/* ---------------------------- section-projects ---------------------------- */
+/* ---------------------------- section-projetos ---------------------------- */
 
-.home-section-projetos img {
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-}
+/* empaty */
 
 /* -------------------------- section-curiosidades -------------------------- */
-
-.home-section-curiosidades img {
-    border-radius: 15px;
-}
 
 .home-col-card-shadow {
     padding: 1em;
@@ -269,4 +290,15 @@ nav ul li a:focus::after,
 
 /* -------------------------- section curso técnico ------------------------- */
 
+.formacao-section-curso p i,
+.formacao-section-curso a i{
+    vertical-align: -5px;
+}
 
+.formacao-section-curso i{
+    color: var(--prussian-blue);
+}
+
+.formacao-section-curso a i{
+    float: left;
+}
