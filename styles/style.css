@@ -1,4 +1,6 @@
-/* *----------------------------- root variables ----------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                               root variables                               */
+/** -------------------------------------------------------------------------- */
 
 :root {
     --oxford-blue: #001b2e;
@@ -18,7 +20,9 @@
     --shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* *--------------------------- global HTML styles --------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                             global HTML styles                             */
+/** -------------------------------------------------------------------------- */
 
 * {
     font-family: 'Poppins', 'Verdana', sans-serif;
@@ -30,17 +34,17 @@ body {
     padding: 0;
 }
 
-/* adiciona um padding nas sections, pois o padding do container fluid foi removido */
 section {
     padding: 2em;
 }
 
-/* *------------------------ bootstrap modified styles ----------------------- */
-
-/* remove o padding do container-fluid para que as sections ocupem a largura máxima da tela */
-.container-fluid {
-    padding: 0;
+section img {
+    margin: 0.5em 0.5em 1em 0.5em;
 }
+
+/** -------------------------------------------------------------------------- */
+/**                          bootstrap modified styles                         */
+/** -------------------------------------------------------------------------- */
 
 .nav-link {
     display: inline-block;
@@ -50,7 +54,9 @@ section {
     background-color: var(--oxford-blue) !important;
 }
 
-/* *--------------------------------- navbar --------------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                                   navbar                                   */
+/** -------------------------------------------------------------------------- */
 
 nav ul {
     margin: 0;
@@ -84,11 +90,6 @@ nav ul li a::after {
     transition: all ease-in-out 250ms;
 }
 
-nav li a:link,
-nav li a:visited {
-    color: #e8e8e8;
-}
-
 nav li a:hover,
 nav li a:focus,
 .pw-nav-link-active {
@@ -106,11 +107,13 @@ nav ul li a:focus::after,
     width: 100%;
 }
 
-/* *------------------------------ global styles ----------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                                global styles                               */
+/** -------------------------------------------------------------------------- */
 
 /* -------------------------------- btn brand ------------------------------- */
 
-a.pw-btn-brand {
+.pw-btn-brand {
     background-color: transparent;
     border: 2px solid var(--prussian-blue);
     border-radius: 10px;
@@ -121,7 +124,7 @@ a.pw-btn-brand {
     transition: background-color 500ms ease;
 }
 
-a.pw-btn-brand:hover {
+.pw-btn-brand:hover {
     background-color: var(--prussian-blue);
     border: 2px solid var(--prussian-blue);
     color: white;
@@ -129,7 +132,7 @@ a.pw-btn-brand:hover {
 
 /* -------------------------------- btn dark -------------------------------- */
 
-a.pw-btn-dark {
+.pw-btn-dark {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 10px;
@@ -140,7 +143,7 @@ a.pw-btn-dark {
     transition: background-color 500ms ease;
 }
 
-a.pw-btn-dark:hover {
+.pw-btn-dark:hover {
     background-color: white;
     border: 2px solid white;
     color: var(--prussian-blue);
@@ -184,12 +187,6 @@ a.pw-btn-dark:hover {
     left: calc(50% - 50px);
 }
 
-/* --------------------------- imagem das sections -------------------------- */
-
-section img {
-    margin: 0.5em 0.5em 1em 0.5em;
-}
-
 /* ------------------------------ section-brand ----------------------------- */
 
 .pw-section-brand {
@@ -204,7 +201,9 @@ section img {
     color: white;
 }
 
-/* *---------------------------- page home styles ---------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                              page home styles                              */
+/** -------------------------------------------------------------------------- */
 
 /* ---------------------------- section-formacao ---------------------------- */
 
@@ -222,6 +221,7 @@ section img {
 
 .home-section-projetos img {
     border-radius: 15px;
+    box-shadow: var(--shadow);
 }
 
 /* -------------------------- section-curiosidades -------------------------- */
@@ -248,7 +248,6 @@ section img {
     color: white;
 }
 
-/* TODO fazer com after */
 .home-section-contato .section-contato-icon:hover,
 .home-section-contato .section-contato-icon:focus {
     color: var(--orange-red);
@@ -264,4 +263,10 @@ section img {
     margin-right: 1em;
 }
 
-/* *-------------------------- page formação styles -------------------------- */
+/** -------------------------------------------------------------------------- */
+/**                            page formação styles                            */
+/** -------------------------------------------------------------------------- */
+
+/* -------------------------- section curso técnico ------------------------- */
+
+
