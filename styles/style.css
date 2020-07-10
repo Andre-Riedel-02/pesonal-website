@@ -22,6 +22,22 @@
 }
 
 /** -------------------------------------------------------------------------- */
+/**                                media querys                                */
+/** -------------------------------------------------------------------------- */
+
+html{
+    font-size: 16px;
+    transition: all ease 500ms;
+}
+
+@media (max-width: 600px){
+    html{
+        font-size: 14px;
+        transition: all ease 500ms;
+    }
+}
+
+/** -------------------------------------------------------------------------- */
 /**                             global HTML styles                             */
 /** -------------------------------------------------------------------------- */
 
@@ -59,17 +75,8 @@ section img {
 /**                                   navbar                                   */
 /** -------------------------------------------------------------------------- */
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    list-style-type: none;
-}
-
 nav li {
-    font-size: 1rem;
+    font-size: 1em;
     padding: 0.5em;
     text-align: center;
 }
@@ -116,52 +123,53 @@ nav ul li a:focus::after,
 
 .pw-btn-brand {
     background-color: transparent;
+    width: 12rem;
+    color: var(--prussian-blue);
     border: 2px solid var(--prussian-blue);
     border-radius: 10px;
-    color: var(--prussian-blue);
-    width: 200px;
     font-weight: 500;
-    transition: color 500ms ease;
-    transition: background-color 500ms ease;
+    transition: all ease 500ms;
 }
 
-.pw-btn-brand:hover {
+.pw-btn-brand:hover,
+.pw-btn-brand:focus {
+    color: white;
     background-color: var(--prussian-blue);
     border: 2px solid var(--prussian-blue);
-    color: white;
 }
 
 /* -------------------------------- btn dark -------------------------------- */
 
 .pw-btn-dark {
     background-color: transparent;
+    width: 12rem;
+    color: white;
     border: 2px solid white;
     border-radius: 10px;
-    color: white;
-    width: 200px;
     font-weight: 500;
-    transition: color 500ms ease;
-    transition: background-color 500ms ease;
+    transition: all ease 500ms;
 }
 
-.pw-btn-dark:hover {
+.pw-btn-dark:hover,
+.pw-btn-dark:focus {
+    color: var(--prussian-blue);
     background-color: white;
     border: 2px solid white;
-    color: var(--prussian-blue);
 }
 
 /* ------------------------------- btn shadow ------------------------------- */
 .pw-btn-shadow {
     background-color: transparent;
+    width: 14rem;
+    color: var(--prussian-blue);
     border-radius: 25px;
     box-shadow: var(--shadow-2);
-    color: var(--prussian-blue);
-    width: 250px;
     font-weight: 500;
-    transition: all 500ms ease;
+    transition: all ease 500ms;
 }
 
-.pw-btn-shadow:hover {
+.pw-btn-shadow:hover,
+.pw-btn-shadow:focus {
    transform: scale(1.1);
    color: var(--prussian-blue);
 }
@@ -196,7 +204,7 @@ nav ul li a:focus::after,
     display: block;
     position: absolute;
     top: 1.5em;
-    width: 100px;
+    width: 6rem;
     height: 3px;
 }
 
@@ -213,7 +221,7 @@ nav ul li a:focus::after,
 }
 
 .pw-h1-after-center::after {
-    left: calc(50% - 50px);
+    left: calc(50% - 3rem);
 }
 
 /* ------------------------------ section-brand ----------------------------- */
@@ -237,35 +245,45 @@ nav ul li a:focus::after,
 /* ---------------------------- section-formação ---------------------------- */
 
 .home-section-formacao {
-    background-image: linear-gradient(to bottom, var(--gray-5) 10%, white);
+    background-image: linear-gradient(to bottom, var(--gray-4), white 50%, white);
 }
 
 .home-section-formacao img {
-    max-height: 200px;
+    width: 70%;
+    max-width: 15rem;
     border-radius: 50%;
 }
 
 /* ---------------------------- section-projetos ---------------------------- */
 
-/* empaty */
+.home-section-projetos img{
+    width: 100%;
+    max-width: 17.5rem;
+}
 
 /* -------------------------- section-curiosidades -------------------------- */
+
+.home-section-curiosidades img{
+    width: 90%;
+    max-width: 17.5rem;
+}
 
 .home-col-card-shadow {
     padding: 1em;
     margin: 1.5em 0.5em;
     border-radius: 15px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-2);
 }
 
 /* ----------------------------- section-contato ---------------------------- */
 
 .home-section-contato img {
     clip-path: polygon(0 17%, 100% 3%, 63% 100%, 0 95%);
+    width: 100%;
+    max-width: 17.5rem;
 }
 
-.home-section-contato .section-contato-icon:link,
-.home-section-contato .section-contato-icon:visited {
+.home-section-contato .section-contato-icon {
     color: white;
 }
 
@@ -289,16 +307,20 @@ nav ul li a:focus::after,
 /** -------------------------------------------------------------------------- */
 
 /* -------------------------- section curso técnico ------------------------- */
+.formacao-section-curso img{
+    width: 100%;
+    max-width: 17.5rem;
+}
 
 .formacao-section-curso p i,
-.formacao-section-curso a i{
-    vertical-align: -5px;
+.formacao-section-curso p a{
+    vertical-align: -25%;
 }
 
 .formacao-section-curso i{
     color: var(--prussian-blue);
 }
 
-.formacao-section-curso a i{
+.formacao-section-curso i{
     float: left;
 }
